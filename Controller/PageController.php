@@ -37,7 +37,17 @@ class PageController
 
     public function displayAction()
     {
-
+        $slug = "teletubbies";
+        if(isset($_GET['p'])){
+            $slug = $_GET['p'];
+        }
+        $page = $this->repository->getBySlug($slug);
+        if(!$page){
+            // 404
+            include "View/404.php";
+            return;
+        }
+        include "View/page-display.php";
     }
 
 }
