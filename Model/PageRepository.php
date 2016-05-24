@@ -28,8 +28,6 @@ class PageRepository
 
     public function getBySlug($slug){
         $sql ="SELECT
-                    `id`,
-                    `slug`,
                     `body`,
                     `title`
                 FROM
