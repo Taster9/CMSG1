@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.0
+-- version 4.4.10
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: May 13, 2016 at 03:01 PM
--- Server version: 5.7.12
--- PHP Version: 7.0.4
+-- Client :  localhost:3306
+-- Généré le :  Lun 06 Juin 2016 à 16:13
+-- Version du serveur :  5.5.42
+-- Version de PHP :  7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kandt`
+-- Base de données :  `kandt`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `page`
+-- Structure de la table `page`
 --
 
 CREATE TABLE `page` (
@@ -35,35 +35,36 @@ CREATE TABLE `page` (
   `img` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `span_text` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `span_class` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `page`
+-- Contenu de la table `page`
 --
 
 INSERT INTO `page` (`id`, `slug`, `h1`, `body`, `title`, `img`, `span_text`, `span_class`) VALUES
-(1, 'teletubbies', '', '    <nav class="navbar navbar-inverse navbar-fixed-top">\n        <div class="container">\n            <div class="navbar-header">\n                <a class="navbar-brand" href="index.html">WtfWeb</a>\n            </div>\n            <div id="navbar" class="navbar-collapse collapse">\n                <ul class="nav navbar-nav">\n                    <li class="active"><a href="index.html">Teletubbies</a></li>\n                    <li><a href="kittens.html">Kittens</a></li>\n                    <li><a href="ironmaiden.html">Iron Maiden</a></li>\n                </ul>\n            </div>\n        </div>\n    </nav>\n    <div class="container theme-showcase" role="main">\n        <div class="jumbotron">\n            <h1>Les Teletubbies</h1>\n            <p>C\'est flippant.</p>\n            <span class="label label-danger">Danger</span>\n        </div>\n        <img class="img-thumbnail" alt="Teletubbies" src="img/teletubbies.jpg" data-holder-rendered="true">\n    </div>', 'Teletubbies', '', '', '');
+(1, 'teletubbies', 'Teletubbies', '<div class="jumbotron">\r\n            <h1>Les Teletubbies</h1>\r\n            <p>C''est flippant.</p>\r\n            <span class="label label-danger">Danger</span>\r\n        </div>\r\n        <img class="img-thumbnail" alt="Teletubbies" src="img/teletubbies.jpg" data-holder-rendered="true">', 'Teletubbies', '', '', ''),
+(2, 'kittens', 'Kittens', '<div class="jumbotron">\n            <h1>Les Chatons!</h1>\n            <p>C''est mignon.</p>\n            <span class="label label-success">Kawaiiii!</span>\n        </div>\n        <img class="img-thumbnail" alt="Teletubbies" src="img/three_kittens.jpg" data-holder-rendered="true">', 'Kittens', '', '', ''),
+(3, 'moomins', 'Les moomins', '<div class="jumbotron">\n            <h1>Les moomins</h1>\n            <p>C''est trop ouf.</p>\n            <span class="label label-success">Old schooooool!</span>\n        </div>\n        <img class="img-thumbnail" alt="Moomins" src="img/moomin.jpg" data-holder-rendered="true">', 'Les moomins', '', '', '');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `page`
+-- Index pour la table `page`
 --
 ALTER TABLE `page`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `page`
+-- AUTO_INCREMENT pour la table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-Status API Training Shop Blog About
